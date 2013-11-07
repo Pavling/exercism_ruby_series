@@ -7,7 +7,8 @@ class Series
   end
 
   def slices(size)
-    @digits.each_cons(size).to_a
+    raise ArgumentError if size > digits.size
+    digits.each_cons(size).to_a
   end
 
 end
