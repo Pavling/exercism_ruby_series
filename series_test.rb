@@ -8,22 +8,18 @@ class SeriesTest < MiniTest::Unit::TestCase
   end
 
   def test_longer_simple_series
-    skip
     assert_equal (0..9).to_a, Series.new("0123456789").digits
   end
 
   def test_reversed_long_series
-    skip
     assert_equal (0..9).to_a.reverse, Series.new("9876543210").digits
   end
 
   def test_another_simple_reversed_series
-    skip
     assert_equal (4..8).to_a.reverse, Series.new("87654").digits
   end
 
   def test_arbitrary_digits
-    skip
     assert_equal [9, 3, 6, 9, 2, 3, 4, 6, 8], Series.new("936923468").digits
   end
 
